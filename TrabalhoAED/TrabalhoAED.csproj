@@ -44,13 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Analize\Analizador.cs" />
     <Compile Include="Analize de Textos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Analize de Textos.Designer.cs">
       <DependentUpon>Analize de Textos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Arquivos\Arquivos.cs" />
+    <Compile Include="Arqs\Arquivos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Analize de Textos.resx">
