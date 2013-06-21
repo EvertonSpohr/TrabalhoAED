@@ -52,6 +52,7 @@
       <DependentUpon>Analize de Textos.cs</DependentUpon>
     </Compile>
     <Compile Include="Arqs\Arquivos.cs" />
+    <Compile Include="Ordenação\Sort.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Analize de Textos.resx">

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabalhoAED.Analize;
 using TrabalhoAED.Arqs;
+using TrabalhoAED.Ordenação;
 
 namespace TrabalhoAED
 {
@@ -36,8 +37,19 @@ namespace TrabalhoAED
             A.abrirArquivo("Teste.txt");
                        
             Analizador.analizaLetras();
-            Console.Out.WriteLine("Analizou o texto");          
+            Console.Out.WriteLine("Analizou o texto");
 
+            Sort M = new Sort();
+
+            M.shellsort(Analizador.Vet_Texto.Length - 1);
+
+            Console.Out.WriteLine("Ordenouu ");
+            Console.Out.WriteLine("Tamanho do vetor: " + Analizador.Vet_Texto.Length);
+
+            foreach (char L in Analizador.Vet_Texto)
+            {
+                Console.Out.Write(L);
+            }
 
         }
     }
