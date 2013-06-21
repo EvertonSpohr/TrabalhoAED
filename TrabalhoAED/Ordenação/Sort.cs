@@ -115,7 +115,7 @@ namespace TrabalhoAED.Ordenação
                 Analizador.Vet_Texto[j + 1] = temp;    
         }
 
-        }
+        }     
            
 
 
