@@ -82,7 +82,23 @@ namespace TrabalhoAED.Analize
 
 
         }
-         
 
+        //Conta numero de caracteres L dentro do vetor
+        public static int contaLetra(char L)
+        {         
+            int contador = 0;
+
+            foreach (char A in Vet_Texto) 
+            {
+                if ((int)A > (int)L) break;
+
+                if ((int)A == (int)L)
+                {                    
+                    contador++;
+                }
+            }           
+
+            return contador;
+        }
     }
 }

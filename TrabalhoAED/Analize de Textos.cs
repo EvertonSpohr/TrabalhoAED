@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabalhoAED.Analize;
@@ -44,13 +45,35 @@ namespace TrabalhoAED
             M.shellsort(Analizador.Vet_Texto.Length - 1);
 
             Console.Out.WriteLine("Ordenouu ");
+
             Console.Out.WriteLine("Tamanho do vetor: " + Analizador.Vet_Texto.Length);
 
-            foreach (char L in Analizador.Vet_Texto)
+            Thread t1 = new Thread(imprimea);
+            t1.Start();
+
+            Thread t2 = new Thread(imprimeb);
+            t2.Start();      
+
+
+            foreach(char L in Analizador.Vet_Texto)
             {
                 Console.Out.Write(L);
             }
 
+            
+
+        }
+
+        public static void imprimea()
+        {
+            int Le = Analizador.contaLetra('a');
+            Console.Out.WriteLine("Numero de a´s: " + Le);
+        }
+
+        public static void imprimeb()
+        {
+            int Le = Analizador.contaLetra('b');
+            Console.Out.WriteLine("Numero de b´s: " + Le);
         }
     }
 }
