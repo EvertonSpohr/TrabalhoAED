@@ -100,5 +100,26 @@ namespace TrabalhoAED.Analize
 
             return contador;
         }
+
+//==========================================================================================
+
+        public static List<int> verificaPosicao(char L)
+        {
+            List<int> ListaPos = new List<int>();
+                        
+            for(int i = 0; Vet_Texto[i] != '\0'; i++)
+            {
+                if ((int)Vet_Texto[i] == (int)L)
+                {
+                    ListaPos.Add(i);                    
+                }
+            }
+            
+            return ListaPos;
+
+        }
+
+
+
     }
 }

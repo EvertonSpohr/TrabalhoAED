@@ -42,38 +42,48 @@ namespace TrabalhoAED
 
             Sort M = new Sort();
 
-            M.shellsort(Analizador.Vet_Texto.Length - 1);
+            M.insertionSort(Analizador.Vet_Texto.Length - 1);
 
             Console.Out.WriteLine("Ordenouu ");
 
             Console.Out.WriteLine("Tamanho do vetor: " + Analizador.Vet_Texto.Length);
 
-            Thread t1 = new Thread(imprimea);
-            t1.Start();
+            //Thread t1 = new Thread(imprime);
+            //t1.Start('a');
 
-            Thread t2 = new Thread(imprimeb);
-            t2.Start();      
+            //Thread t2 = new Thread(imprime);
+            //t2.Start('b');      
 
 
-            foreach(char L in Analizador.Vet_Texto)
+            foreach (char L in Analizador.Vet_Texto)
             {
                 Console.Out.Write(L);
             }
 
+            //Console.Out.WriteLine(" ========= \n");
+
+            //imprimePosicao('a');
             
 
         }
 
-        public static void imprimea()
+        public static void imprime(Object L)
         {
-            int Le = Analizador.contaLetra('a');
-            Console.Out.WriteLine("Numero de a´s: " + Le);
+            Thread.Sleep(20);
+            int Le = Analizador.contaLetra((char)L);
+            Console.Out.WriteLine("Numero de "+ L + ": " + Le);
         }
 
-        public static void imprimeb()
+        public static void imprimePosicao(Object L)
         {
-            int Le = Analizador.contaLetra('b');
-            Console.Out.WriteLine("Numero de b´s: " + Le);
+            List<int> LI = Analizador.verificaPosicao((char)L);
+
+            foreach (int A in LI) {
+                Console.Out.Write(A + ", ");
+            }
+
+
+            
         }
     }
 }
