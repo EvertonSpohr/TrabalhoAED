@@ -51,7 +51,7 @@ namespace TrabalhoAED
             //Console.Out.WriteLine("Comp: "+ S.N_Comp + " Mov: " + S.N_Mov);
 
             ////imprimePosicao('a');
-            
+
 
         }
 
