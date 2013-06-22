@@ -32,58 +32,46 @@ namespace TrabalhoAED
             InitializeComponent();
 
             
-            Console.Out.WriteLine("Começou a poha lokaa");
+            //Console.Out.WriteLine("Começou a poha lokaa");
 
-            Arquivos A = new Arquivos();
-            A.abrirArquivo("Teste.txt");
+            //Arquivos A = new Arquivos();
+            //A.abrirArquivo("Teste.txt");
                        
-            Analizador.analizaLetras();
-            Console.Out.WriteLine("Analizou o texto");
+            //Analizador.analizaLetras();
+            //Console.Out.WriteLine("Analizou o texto");
 
-            Sort M = new Sort();
+            //ShellSort S = new ShellSort();
 
-            M.insertionSort(Analizador.Vet_Texto.Length - 1);
+            //S.shellSort(Analizador.Vet_Texto.Length);
 
-            Console.Out.WriteLine("Ordenouu ");
-
-            Console.Out.WriteLine("Tamanho do vetor: " + Analizador.Vet_Texto.Length);
-
-            //Thread t1 = new Thread(imprime);
-            //t1.Start('a');
-
-            //Thread t2 = new Thread(imprime);
-            //t2.Start('b');      
-
-
-            foreach (char L in Analizador.Vet_Texto)
-            {
-                Console.Out.Write(L);
-            }
-
+            //Console.Out.WriteLine("Ordenouu ");
+                                    
             //Console.Out.WriteLine(" ========= \n");
 
-            //imprimePosicao('a');
+            //Console.Out.WriteLine("Comp: "+ S.N_Comp + " Mov: " + S.N_Mov);
+
+            ////imprimePosicao('a');
             
 
         }
 
-        public static void imprime(Object L)
-        {
-            Thread.Sleep(20);
-            int Le = Analizador.contaLetra((char)L);
-            Console.Out.WriteLine("Numero de "+ L + ": " + Le);
-        }
+        //public static void imprime(Object L)
+        //{
+        //    Thread.Sleep(20);
+        //    int Le = Analizador.contaLetra((char)L);
+        //    Console.Out.WriteLine("Numero de "+ L + ": " + Le);
+        //}
 
-        public static void imprimePosicao(Object L)
-        {
-            List<int> LI = Analizador.verificaPosicao((char)L);
+        //public static void imprimePosicao(Object L)
+        //{
+        //    List<int> LI = Analizador.verificaPosicao((char)L);
 
-            foreach (int A in LI) {
-                Console.Out.Write(A + ", ");
-            }
+        //    foreach (int A in LI) {
+        //        Console.Out.Write(A + ", ");
+        //    }
 
 
             
-        }
+        //}
     }
 }

@@ -52,7 +52,17 @@
       <DependentUpon>Analize de Textos.cs</DependentUpon>
     </Compile>
     <Compile Include="Arqs\Arquivos.cs" />
-    <Compile Include="Ordenação\Sort.cs" />
+    <Compile Include="Ordenação\BubbleSort.cs" />
+    <Compile Include="Ordenação\HeapSort.cs" />
+    <Compile Include="Ordenação\InsertionSort.cs" />
+    <Compile Include="Ordenação\KSort.cs" />
+    <Compile Include="Ordenação\MergeSort.cs" />
+    <Compile Include="Ordenação\NewSortLeftPivot.cs" />
+    <Compile Include="Ordenação\NewSortMiddlePivot.cs" />
+    <Compile Include="Ordenação\QuickSort.cs" />
+    <Compile Include="Ordenação\SelectionSort.cs" />
+    <Compile Include="Ordenação\ShakerSort.cs" />
+    <Compile Include="Ordenação\ShellSort.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Analize de Textos.resx">

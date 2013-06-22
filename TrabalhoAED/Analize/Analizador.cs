@@ -25,10 +25,7 @@ namespace TrabalhoAED.Analize
             for (int i = 0; /*i < Tam*/ Vet_Texto[i] != '\0'; i++)
             {
                 int CodA = (int)Vet_Texto[i]; //CONVERTE O CHAR PRA INT
-
-                Console.Out.WriteLine(CodA);
-
-                
+                                
                 //Verifica acentos no A (maiusculo)
                 if ((CodA >= 192 && CodA <= 195) || (CodA >= 224 && CodA <= 227))
                 {
