@@ -16,21 +16,21 @@ namespace TrabalhoAED.Ordenação
 
 //METODOS =================================================================================
 //QUICK SORT =====================================================================================
-        void QS(int esq, int dir)
+        void QS(int esq, int dir, int pos)
         {
 
-            int i = esq, j = dir, meio = (int)Analizador.Vet_Texto[(esq + dir) / 2];
+            int i = esq, j = dir, meio = (int)Analizador.Lista_Vet[pos][(esq + dir) / 2];
 
             do
             {
-                while ((i < dir) && ((int)Analizador.Vet_Texto[i] < meio))
+                while ((i < dir) && ((int)Analizador.Lista_Vet[pos][i] < meio))
                 {
                     N_Comp++; N_Comp++;
 
                     i++;
                 }
 
-                while ((j > esq) && ((int)Analizador.Vet_Texto[j] > meio))
+                while ((j > esq) && ((int)Analizador.Lista_Vet[pos][j] > meio))
                 {
                     N_Comp++; N_Comp++;
 
@@ -41,9 +41,9 @@ namespace TrabalhoAED.Ordenação
                 if (i <= j)
                 {
                     N_Mov++;
-                    char temp = Analizador.Vet_Texto[i];
-                    Analizador.Vet_Texto[i] = Analizador.Vet_Texto[j];
-                    Analizador.Vet_Texto[j] = temp;
+                    char temp = Analizador.Lista_Vet[pos][i];
+                    Analizador.Lista_Vet[pos][i] = Analizador.Lista_Vet[pos][j];
+                    Analizador.Lista_Vet[pos][j] = temp;
                     i++; j--;
                 }
 
@@ -53,20 +53,20 @@ namespace TrabalhoAED.Ordenação
             N_Comp++;
             if (esq < j)
             {
-                QS(esq, j);
+                QS(esq, j, pos);
             }
 
             N_Comp++;
             if (i < dir)
             {
-                QS(i, dir);
+                QS(i, dir, pos);
             }
 
         }
  //-----------------------------------------------------------------------------------------------------
-        public void quickSort(int n)
+        public void quickSort(int n, int pos)
         {
-            QS(0, n - 1);
+            QS(0, n - 1, pos);
         }
 //=========================================================================================================
 

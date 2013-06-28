@@ -17,7 +17,7 @@ namespace TrabalhoAED.Ordenação
 //METODOS =================================================================================
 
 //SHAKER SORT =============================================================================================
-        public void shakerSort(int n)
+        public void shakerSort(int n, int pos)
         {
             int i;
             Boolean troca = false;
@@ -31,28 +31,28 @@ namespace TrabalhoAED.Ordenação
                 for (i = n - 1; i > 0; i--)
                 {
                     N_Comp++;
-                    if ((int)Analizador.Vet_Texto[i - 1] > (int)Analizador.Vet_Texto[i])
+                    if ((int)Analizador.Lista_Vet[pos][i - 1] > (int)Analizador.Lista_Vet[pos][i])
                     {
                         N_Mov++;
                         
                         troca = true;
-                        temp = Analizador.Vet_Texto[i - 1];
-                        Analizador.Vet_Texto[i - 1] = Analizador.Vet_Texto[i];
-                        Analizador.Vet_Texto[i] = temp;
+                        temp = Analizador.Lista_Vet[pos][i - 1];
+                        Analizador.Lista_Vet[pos][i - 1] = Analizador.Lista_Vet[pos][i];
+                        Analizador.Lista_Vet[pos][i] = temp;
                     }
                 }
 
                 for (i = 1; i < n; i++)
                 {
                     N_Comp++;
-                    if ((int)Analizador.Vet_Texto[i - 1] > (int)Analizador.Vet_Texto[i])
+                    if ((int)Analizador.Lista_Vet[pos][i - 1] > (int)Analizador.Lista_Vet[pos][i])
                     {
                         N_Mov++;
 
                         troca = true;
-                        temp = Analizador.Vet_Texto[i - 1];
-                        Analizador.Vet_Texto[i - 1] = Analizador.Vet_Texto[i];
-                        Analizador.Vet_Texto[i] = temp;
+                        temp = Analizador.Lista_Vet[pos][i - 1];
+                        Analizador.Lista_Vet[pos][i - 1] = Analizador.Lista_Vet[pos][i];
+                        Analizador.Lista_Vet[pos][i] = temp;
                     }
                 }
 

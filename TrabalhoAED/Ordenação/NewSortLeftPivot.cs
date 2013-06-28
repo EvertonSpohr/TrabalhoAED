@@ -20,7 +20,7 @@ namespace TrabalhoAED.Ordenação
 
 //NEW SORT LEFT PIVOT =====================================================================================
         
-        void reorganizaLeft(int esq, int dir, int count)
+        void reorganizaLeft(int esq, int dir, int count, int pos)
         {
 
             int i = esq, j = dir, p = esq;
@@ -29,47 +29,47 @@ namespace TrabalhoAED.Ordenação
             for (int k = p + 1; k <= dir; k++)
             {
                 N_Comp++;
-                if ((int)Analizador.Vet_Texto[p] > (int)Analizador.Vet_Texto[k])
+                if ((int)Analizador.Lista_Vet[pos][p] > (int)Analizador.Lista_Vet[pos][k])
                 {
                     N_Mov++;
 
-                    aux[i] = Analizador.Vet_Texto[k];
+                    aux[i] = Analizador.Lista_Vet[pos][k];
                     i++;
                 }
                 else
                 {
                     N_Mov++;
 
-                    aux[j] = Analizador.Vet_Texto[k];
+                    aux[j] = Analizador.Lista_Vet[pos][k];
                     j--;
                 }
             }
 
             N_Mov++;
-            aux[i] = Analizador.Vet_Texto[p];
+            aux[i] = Analizador.Lista_Vet[pos][p];
             meio = i;
 
             for (int k = esq; k <= dir; k++)
             {
                 N_Mov++;
-                Analizador.Vet_Texto[k] = aux[k];
+                Analizador.Lista_Vet[pos][k] = aux[k];
             }
         }
 //-------------------------------------------------------------------------------------------------------
-        void LeftSort(int esq, int dir, int count)
+        void LeftSort(int esq, int dir, int count, int pos)
         {
             N_Comp++;
             if (esq < dir)
             {
-                reorganizaLeft(esq, dir, count);
-                LeftSort(esq, meio - 1, count);
-                LeftSort(meio + 1, dir, count);
+                reorganizaLeft(esq, dir, count, pos);
+                LeftSort(esq, meio - 1, count, pos);
+                LeftSort(meio + 1, dir, count, pos);
             }
         }
 //-------------------------------------------------------------------------------------------------------
-        public void newSortLeftPivot(int n)
+        public void newSortLeftPivot(int n,int pos)
         {
-            LeftSort(0, n - 1, n);
+            LeftSort(0, n - 1, n, pos);
         }
 //=========================================================================================================
 

@@ -19,7 +19,7 @@ namespace TrabalhoAED.Ordenação
 //METODOS =================================================================================
                 
 //NEW SORT MIDDLE PIVOT ===================================================================================
-        void reorganizaMiddle(int esq, int dir, int count)
+        void reorganizaMiddle(int esq, int dir, int count, int pos)
         {
 
             int i = esq, j = dir, k, p = (esq + dir) / 2;
@@ -29,18 +29,18 @@ namespace TrabalhoAED.Ordenação
             {
 
                 N_Comp++;
-                if ((int)Analizador.Vet_Texto[p] > (int)Analizador.Vet_Texto[k])
+                if ((int)Analizador.Lista_Vet[pos][p] > (int)Analizador.Lista_Vet[pos][k])
                 {
                     N_Mov++;
 
-                    aux[i] = Analizador.Vet_Texto[k];
+                    aux[i] = Analizador.Lista_Vet[pos][k];
                     i++;
                 }
                 else
                 {
                     N_Mov++;
 
-                    aux[j] = Analizador.Vet_Texto[k];
+                    aux[j] = Analizador.Lista_Vet[pos][k];
                     j--;
                 }
             }
@@ -50,47 +50,47 @@ namespace TrabalhoAED.Ordenação
 
                 N_Comp++;
 
-                if ((int)Analizador.Vet_Texto[p] > (int)Analizador.Vet_Texto[k])
+                if ((int)Analizador.Lista_Vet[pos][p] > (int)Analizador.Lista_Vet[pos][k])
                 {
                     N_Mov++;
 
-                    aux[i] = Analizador.Vet_Texto[k];
+                    aux[i] = Analizador.Lista_Vet[pos][k];
                     i++;
                 }
                 else
                 {
                     N_Mov++;
 
-                    aux[j] = Analizador.Vet_Texto[k];
+                    aux[j] = Analizador.Lista_Vet[pos][k];
                     j--;
                 }
             }
 
             N_Mov++;
-            aux[i] = Analizador.Vet_Texto[p];
+            aux[i] = Analizador.Lista_Vet[pos][p];
             meio = i;
 
             for (k = esq; k <= dir; k++)
             {
                 N_Mov++;
-                Analizador.Vet_Texto[k] = aux[k];
+                Analizador.Lista_Vet[pos][k] = aux[k];
             }
         }
 //-------------------------------------------------------------------------------------------------------
-        void MiddleSort(int esq, int dir, int count)
+        void MiddleSort(int esq, int dir, int count, int pos)
         {
             N_Comp++;
             if (esq < dir)
             {
-                reorganizaMiddle(esq, dir, count);
-                MiddleSort(esq, meio - 1, count);
-                MiddleSort(meio + 1, dir, count);
+                reorganizaMiddle(esq, dir, count, pos);
+                MiddleSort(esq, meio - 1, count, pos);
+                MiddleSort(meio + 1, dir, count, pos);
             }
         }
 //-------------------------------------------------------------------------------------------------------
-        public void newSortMiddlePivot(int n)
+        public void newSortMiddlePivot(int n, int pos)
         {
-            MiddleSort(0, n - 1, n);
+            MiddleSort(0, n - 1, n, pos);
         }
 //=========================================================================================================
 

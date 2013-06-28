@@ -18,7 +18,7 @@ namespace TrabalhoAED.Ordenação
 //METODOS =================================================================================================
 
 //SHELL SORT ===============================================================================================
-        public void shellSort(int n)
+        public void shellSort(int n, int pos)
         {
 
             Console.Out.WriteLine("Dentro do shell");
@@ -31,13 +31,14 @@ namespace TrabalhoAED.Ordenação
                 d = (d+1)/2;
                 for(i = 0; i < n-d; i++){                    
                     N_Comp++;
-                    if((int)Analizador.Vet_Texto[i] > (int)Analizador.Vet_Texto[i+d]){
+                    if ((int)Analizador.Lista_Vet[pos][i] > (int)Analizador.Lista_Vet[pos][i + d])
+                    {
                         
                         N_Mov++;
-                        
-                        char aux = Analizador.Vet_Texto[d+i];
-                        Analizador.Vet_Texto[d+i] = Analizador.Vet_Texto[i];
-                        Analizador.Vet_Texto[i] = aux;
+
+                        char aux = Analizador.Lista_Vet[pos][d + i];
+                        Analizador.Lista_Vet[pos][d + i] = Analizador.Lista_Vet[pos][i];
+                        Analizador.Lista_Vet[pos][i] = aux;
                         flag = true;
                     }
                 }

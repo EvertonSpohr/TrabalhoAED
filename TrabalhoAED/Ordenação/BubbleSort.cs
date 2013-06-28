@@ -17,7 +17,7 @@ namespace TrabalhoAED.Ordenação
 //METODOS ====================================================================================
 
 //BUBBLE SORT =============================================================================================
-        public void bubbleSort(int n)
+        public void bubbleSort(int n, int pos)
         {
             Console.Out.WriteLine("Dentro do Bubble Sort");
 
@@ -28,14 +28,14 @@ namespace TrabalhoAED.Ordenação
             {
                 for (i = 0; i < j; i++)
                 {
-                    N_Comp++; 
-                    if ((int)Analizador.Vet_Texto[i] > (int)Analizador.Vet_Texto[i + 1])
+                    N_Comp++;
+                    if ((int)Analizador.Lista_Vet[pos][i] > (int)Analizador.Lista_Vet[pos][i + 1])
                     {
-                        N_Mov++; 
+                        N_Mov++;
 
-                        temp = Analizador.Vet_Texto[i]; // se for realiza a troca
-                        Analizador.Vet_Texto[i] = Analizador.Vet_Texto[i + 1];
-                        Analizador.Vet_Texto[i + 1] = temp;
+                        temp = Analizador.Lista_Vet[pos][i]; // se for realiza a troca
+                        Analizador.Lista_Vet[pos][i] = Analizador.Lista_Vet[pos][i + 1];
+                        Analizador.Lista_Vet[pos][i + 1] = temp;
                     }
                 }
             }

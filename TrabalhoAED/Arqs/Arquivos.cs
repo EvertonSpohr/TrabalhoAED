@@ -19,25 +19,35 @@ namespace TrabalhoAED.Arqs
     class Arquivos
     {
 
+//ATRIBUTOS =================================================================================================
+
+        public static string[] Local = new string[15];
+
+//METODOS ===================================================================================================
+
         // Abre o arquivo e coloca cada letra em um vetor
         public void abrirArquivo(string Local)
         {
             int ContL = 0; //Contador para as letras
-
+            
+            char[] Vet_Texto = new char[10000];
+            
             StreamReader Read = new StreamReader(Local);
 
-            while ( !Read.EndOfStream && (ContL < 9999) )     //ENQUANTO NAO FOR O FIM DO ARQUIVO... NO MAX 9999 LETRAS
+            while (!Read.EndOfStream && (ContL < 9999))     //ENQUANTO NAO FOR O FIM DO ARQUIVO... NO MAX 9999 LETRAS
             {
                 string L = Read.ReadLine();
 
                 foreach(char Letra in L){                    
-                    Analizador.Vet_Texto[ContL] = Letra;                    
+                    Vet_Texto[ContL] = Letra;                    
                     ContL++;
                 }                              
             }            
-            Analizador.Vet_Texto[ContL] = '\0';
+            Vet_Texto[ContL] = '\0';
 
-            Read.Close();           
+            Analizador.Lista_Vet.Add(Vet_Texto);
+
+            Read.Close();            
                 
         } // Fim do abrirArquivo
     }    

@@ -19,25 +19,26 @@ namespace TrabalhoAED.Ordenação
 //METODOS =================================================================================
 
 //K-SORT ==================================================================================================
-       int reorganizaK(int esq, int dir) 
+       int reorganizaK(int esq, int dir, int pos) 
        {   
            int i = esq, j = dir + 1,  p = esq + 1, k = p, flag = 0;
-           char temp = '0', key = Analizador.Vet_Texto[esq];
+           char temp = '0', key = Analizador.Lista_Vet[pos][esq];
 	
 	                while( (j - i) >= 2 ){
 
                         N_Comp++;
-		                if((int)key <= (int)Analizador.Vet_Texto[p]){
+                        if ((int)key <= (int)Analizador.Lista_Vet[pos][p])
+                        {
                             N_Comp++;
                             if( (p != j) && (j != (dir + 1)) ){
                                 N_Mov++;
-				                
-                                Analizador.Vet_Texto[j] = Analizador.Vet_Texto[p];                                                
+
+                                Analizador.Lista_Vet[pos][j] = Analizador.Lista_Vet[pos][p];                                                
 			                }
 			                else if( j == dir+1 ){
                                 N_Mov++;
 
-				                temp = Analizador.Vet_Texto[p];
+                                temp = Analizador.Lista_Vet[pos][p];
 				                flag = 1;
 			                }
 			                j--;
@@ -46,36 +47,36 @@ namespace TrabalhoAED.Ordenação
 		                else{
                             N_Mov++;
 
-			                Analizador.Vet_Texto[i] = Analizador.Vet_Texto[p];
+                            Analizador.Lista_Vet[pos][i] = Analizador.Lista_Vet[pos][p];
 			                i++;
 			                k++;
 			                p = k;		                }
 	                }
 
                     N_Mov++;
-	                Analizador.Vet_Texto[i] = key;
+                    Analizador.Lista_Vet[pos][i] = key;
 	                        
 	                if(flag == 1) {
-                            Analizador.Vet_Texto[i+1] = temp;
+                        Analizador.Lista_Vet[pos][i + 1] = temp;
                     }        
                         
 	                return i;
             }
 //------------------------------------------------------------------------------------------------------
-       void SortK(int esq, int dir)
+       void SortK(int esq, int dir, int pos)
        {
            N_Comp++;
            if (esq < dir)
            {   
-               meio = reorganizaK(esq, dir);
-               SortK(esq, meio - 1);
-               SortK(meio + 1, dir);
+               meio = reorganizaK(esq, dir, pos);
+               SortK(esq, meio - 1, pos);
+               SortK(meio + 1, dir, pos);
            }
        }
 //------------------------------------------------------------------------------------------------------
-        public void K_Sort(int n)
+        public void K_Sort(int n, int pos)
         {
-            SortK(0, n-1);
+            SortK(0, n-1, pos);
         }
 //==========================================================================================================
 

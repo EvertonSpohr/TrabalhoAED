@@ -51,6 +51,7 @@
     <Compile Include="Analize de Textos.Designer.cs">
       <DependentUpon>Analize de Textos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Analize\Val_Analize.cs" />
     <Compile Include="Arqs\Arquivos.cs" />
     <Compile Include="Ordenação\BubbleSort.cs" />
     <Compile Include="Ordenação\HeapSort.cs" />

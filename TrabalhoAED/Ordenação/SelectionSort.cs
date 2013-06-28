@@ -17,25 +17,25 @@ namespace TrabalhoAED.Ordenação
 //METODOS =================================================================================
 
 //SELECTION SORT ==========================================================================================
-        int MenorElem(int cont, int ini)
+        int MenorElem(int cont, int ini, int pos)
         {
             int j = ini;
-            char temp = Analizador.Vet_Texto[ini];
+            char temp = Analizador.Lista_Vet[pos][ini];
 
             for (int i = ini; i < cont; i++)
             {
                 N_Comp++;
-                if ((int)temp > (int)Analizador.Vet_Texto[i])
+                if ((int)temp > (int)Analizador.Lista_Vet[pos][i])
                 {
-                    N_Mov++;
-                    temp = Analizador.Vet_Texto[i];
+                    //N_Mov++;
+                    temp = Analizador.Lista_Vet[pos][i];
                     j = i;
                 }
             }
             return j;
         }
 //------------------------------------------------------------------------------------------------------
-        public void selectionSort(int n)
+        public void selectionSort(int n, int pos)
         {
             int j;
             char temp;
@@ -44,10 +44,10 @@ namespace TrabalhoAED.Ordenação
             {
                 N_Mov++;
 
-                j = MenorElem(n, i);
-                temp = Analizador.Vet_Texto[j];
-                Analizador.Vet_Texto[j] = Analizador.Vet_Texto[i];
-                Analizador.Vet_Texto[i] = temp;
+                j = MenorElem(n, i, pos);
+                temp = Analizador.Lista_Vet[pos][j];
+                Analizador.Lista_Vet[pos][j] = Analizador.Lista_Vet[pos][i];
+                Analizador.Lista_Vet[pos][i] = temp;
             }
         }
 //==========================================================================================================

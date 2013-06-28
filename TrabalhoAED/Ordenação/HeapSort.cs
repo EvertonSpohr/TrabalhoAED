@@ -18,11 +18,11 @@ namespace TrabalhoAED.Ordenação
 
 
 //HEAP SORT ===============================================================================================
-        void refazHeap(int esq, int dir)
+        void refazHeap(int esq, int dir, int pos)
         {
             int i = esq, j = (2 * i);
             int pai = 0;
-            int x = (int)Analizador.Vet_Texto[i];
+            int x = (int)Analizador.Lista_Vet[pos][i];
 
             while ((j <= dir) && (pai == 0))
             {
@@ -33,17 +33,17 @@ namespace TrabalhoAED.Ordenação
                 if (j < dir)
                 {
                     N_Comp++;
-                    if ((int)Analizador.Vet_Texto[j] < (int)Analizador.Vet_Texto[j + 1])
+                    if ((int)Analizador.Lista_Vet[pos][j] < (int)Analizador.Lista_Vet[pos][j + 1])
                     {
                         j++;
                     }
                 }
 
                 N_Comp++;
-                if (x < (int)Analizador.Vet_Texto[j])
+                if (x < (int)Analizador.Lista_Vet[pos][j])
                 {
                     N_Mov++;
-                    Analizador.Vet_Texto[i] = Analizador.Vet_Texto[j];
+                    Analizador.Lista_Vet[pos][i] = Analizador.Lista_Vet[pos][j];
                     i = j;
                     j = (2 * i);
                 }
@@ -51,23 +51,23 @@ namespace TrabalhoAED.Ordenação
                 {
                     pai = 1;
                 }
-                Analizador.Vet_Texto[i] = (char)x;
+                Analizador.Lista_Vet[pos][i] = (char)x;
             }
         }
         //----------------------------------------------------------------------------------------------        
-        void constroiHeap(int n)
+        void constroiHeap(int n, int pos)
         {
 
             int esq;
 
             for (esq = n - 1; esq >= 0; esq--)
             {
-                refazHeap(esq, n - 2);
+                refazHeap(esq, n - 2, pos);
             }
 
         }
         //-------------------------------------------------------------------------------------------------
-        public void heapSort(int n)
+        public void heapSort(int n, int pos)
         {
 
             Console.Out.WriteLine("Dentro do HeapSort");
@@ -75,18 +75,18 @@ namespace TrabalhoAED.Ordenação
             int esq = 0;
             int dir;
 
-            constroiHeap(n);
+            constroiHeap(n, pos);
 
             for (dir = n - 2; dir >= 0; dir--)
             {
 
                 N_Mov++;
 
-                char x = Analizador.Vet_Texto[0];
-                Analizador.Vet_Texto[0] = Analizador.Vet_Texto[dir + 1];
-                Analizador.Vet_Texto[dir + 1] = x;
+                char x = Analizador.Lista_Vet[pos][0];
+                Analizador.Lista_Vet[pos][0] = Analizador.Lista_Vet[pos][dir + 1];
+                Analizador.Lista_Vet[pos][dir + 1] = x;
 
-                refazHeap(esq, dir);
+                refazHeap(esq, dir, pos);
             }
 
         }

@@ -17,7 +17,7 @@ namespace TrabalhoAED.Ordenação
 //METODOS =================================================================================
 
 //INSERTION SORT ==========================================================================================
-        public void insertionSort(int n)
+        public void insertionSort(int n, int pos)
         {
 
             Console.Out.WriteLine("Dentro do Insertion Sort");
@@ -26,16 +26,16 @@ namespace TrabalhoAED.Ordenação
             char temp;
 
             for (i = 1; i < n - 1; ++i)
-            {   
-                temp = Analizador.Vet_Texto[i];
+            {
+                temp = Analizador.Lista_Vet[pos][i];
 
-                for (j = i - 1; j >= 0 && (int)temp < (int)Analizador.Vet_Texto[j]; j--)
+                for (j = i - 1; j >= 0 && (int)temp < (int)Analizador.Lista_Vet[pos][j]; j--)
                 {
                     N_Comp++; N_Comp++; N_Mov++;
 
-                    Analizador.Vet_Texto[j + 1] = Analizador.Vet_Texto[j];
+                    Analizador.Lista_Vet[pos][j + 1] = Analizador.Lista_Vet[pos][j];
                 }
-                Analizador.Vet_Texto[j + 1] = temp;
+                Analizador.Lista_Vet[pos][j + 1] = temp;
                 N_Mov++;
             }
 

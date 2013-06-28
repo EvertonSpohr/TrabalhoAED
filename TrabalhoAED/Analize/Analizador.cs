@@ -9,20 +9,23 @@ namespace TrabalhoAED.Analize
     public class Analizador
     {
     //ATRIBUTOS ===============================================================
-
-        public static char[] Vet_Texto = new char[10000]; 
-
+               
+        public static int Tam = 0;
+        
+        public static List<char[]> Lista_Vet = new List<char[]>();
+               
 
     //=========================================================================
     
     //METODOS =================================================================
        
         //O arquivo deve ser salvo em qualquer padrao menos ANSI
-        public static void analizaLetras()
+        public static void analizaLetras(char[] Vet_Texto)
         {
-            int Tam = Vet_Texto.Length;
+            
+            int i;
 
-            for (int i = 0; /*i < Tam*/ Vet_Texto[i] != '\0'; i++)
+            for (i = 0; Vet_Texto[i] != '\0'; i++)
             {
                 int CodA = (int)Vet_Texto[i]; //CONVERTE O CHAR PRA INT
                                 
@@ -74,14 +77,15 @@ namespace TrabalhoAED.Analize
                     Vet_Texto[i] = (char)(CodA + 32);
                 }
 
+                Tam = i;
             }
 
-
+            Tam = i++;
 
         }
 
         //Conta numero de caracteres L dentro do vetor
-        public static int contaLetra(char L)
+        public static int contaLetra(char L, char[] Vet_Texto)
         {         
             int contador = 0;
 
@@ -100,7 +104,7 @@ namespace TrabalhoAED.Analize
 
 //==========================================================================================
 
-        public static List<int> verificaPosicao(char L)
+        public static List<int> verificaPosicao(char L, char[] Vet_Texto)
         {
             List<int> ListaPos = new List<int>();
                         

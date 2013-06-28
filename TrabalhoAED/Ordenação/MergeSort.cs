@@ -17,7 +17,7 @@ namespace TrabalhoAED.Ordenação
 //METODOS =================================================================================
 
 //MERGE SORT ==============================================================================================
-        void intercala(int esq, int dir, int meio)
+        void intercala(int esq, int dir, int meio, int pos)
         {
             int i, j;
             char x;
@@ -25,21 +25,21 @@ namespace TrabalhoAED.Ordenação
             for (i = meio + 1; i <= dir; i++)
             {
                 j = i - 1;
-                x = Analizador.Vet_Texto[i];
+                x = Analizador.Lista_Vet[pos][i];
 
-                while ((j >= esq) && ((int)x < (int)Analizador.Vet_Texto[j]))
+                while ((j >= esq) && ((int)x < (int)Analizador.Lista_Vet[pos][j]))
                 {
                     N_Comp++; N_Comp++; N_Mov++;
 
-                    Analizador.Vet_Texto[j + 1] = Analizador.Vet_Texto[j];
+                    Analizador.Lista_Vet[pos][j + 1] = Analizador.Lista_Vet[pos][j];
                     j--;
                 }
-                Analizador.Vet_Texto[j + 1] = x;
+                Analizador.Lista_Vet[pos][j + 1] = x;
                 N_Mov++;
             }
         }
 //-------------------------------------------------------------------------------------------------------
-        void marge(int esq, int dir)
+        void marge(int esq, int dir, int pos)
         {
             int meio;
 
@@ -47,15 +47,15 @@ namespace TrabalhoAED.Ordenação
             if (esq < dir)
             {
                 meio = (esq + dir) / 2;
-                marge(esq, meio);
-                marge(meio + 1, dir);
-                intercala(esq, dir, meio);
+                marge(esq, meio, pos);
+                marge(meio + 1, dir, pos);
+                intercala(esq, dir, meio, pos);
             }
         }
 //-------------------------------------------------------------------------------------------------------
-        public void margeSort(int n)
+        public void margeSort(int n, int pos)
         {
-            marge(0, n - 1);
+            marge(0, n - 1, pos);
         }
 //==========================================================================================================
 
