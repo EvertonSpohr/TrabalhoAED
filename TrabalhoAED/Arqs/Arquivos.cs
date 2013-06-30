@@ -26,7 +26,7 @@ namespace TrabalhoAED.Arqs
 //METODOS ===================================================================================================
 
         // Abre o arquivo e coloca cada letra em um vetor
-        public void abrirArquivo(string Local)
+        public char[] abrirArquivo(string Local)
         {
             int ContL = 0; //Contador para as letras
             
@@ -45,9 +45,11 @@ namespace TrabalhoAED.Arqs
             }            
             Vet_Texto[ContL] = '\0';
 
-            Analizador.Lista_Vet.Add(Vet_Texto);
+            Read.Close();
+           
+            return(Vet_Texto);
 
-            Read.Close();            
+                       
                 
         } // Fim do abrirArquivo
     }    

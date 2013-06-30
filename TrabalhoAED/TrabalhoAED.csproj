@@ -45,14 +45,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Analize\Analizador.cs" />
-    <Compile Include="Analize de Textos.cs">
+    <Compile Include="Interface\Analize de Textos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Analize de Textos.Designer.cs">
+    <Compile Include="Interface\Analize de Textos.Designer.cs">
       <DependentUpon>Analize de Textos.cs</DependentUpon>
     </Compile>
     <Compile Include="Analize\Val_Analize.cs" />
     <Compile Include="Arqs\Arquivos.cs" />
+    <Compile Include="Interface\Espacamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Espacamento.Designer.cs">
+      <DependentUpon>Espacamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Frequencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Frequencia.Designer.cs">
+      <DependentUpon>Frequencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ordenação\BubbleSort.cs" />
     <Compile Include="Ordenação\HeapSort.cs" />
     <Compile Include="Ordenação\InsertionSort.cs" />
@@ -66,8 +78,14 @@
     <Compile Include="Ordenação\ShellSort.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Analize de Textos.resx">
+    <EmbeddedResource Include="Interface\Analize de Textos.resx">
       <DependentUpon>Analize de Textos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Espacamento.resx">
+      <DependentUpon>Espacamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Frequencia.resx">
+      <DependentUpon>Frequencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

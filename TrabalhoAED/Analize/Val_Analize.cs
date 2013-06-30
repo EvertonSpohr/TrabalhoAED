@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrabalhoAED.Analize
 {
-    class Val_Analize
+    public class Val_Analize
     {
 //ATRIBUTOS ===============================================================
 
