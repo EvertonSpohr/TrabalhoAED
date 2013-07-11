@@ -5,6 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using TrabalhoAED.Analize;
 
+/*
+ *  Classe que implementa o algoritmo bubblesort
+ *  
+ *  Estratégia: 
+ *  O Bubble sort  é um algoritmo de ordenação simples e ineficiênte. Ele trabalha
+ *  comparando cada elemento da lista com o próximo e efetua a troca caso esteja fora 
+ *  de ordem, quando não há mais nenhuma troca realizada o algoritmo para e a lista está ordenada. 
+ * 
+*/
+
 namespace TrabalhoAED.Ordenação
 {
     class BubbleSort
@@ -18,9 +28,7 @@ namespace TrabalhoAED.Ordenação
 
 //BUBBLE SORT =============================================================================================
         public void bubbleSort(int n, int pos)
-        {
-            Console.Out.WriteLine("Dentro do Bubble Sort");
-
+        {            
             int i, j;
             char temp;
 

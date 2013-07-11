@@ -67,37 +67,37 @@ namespace TrabalhoAED
             switch (A)
             {
                 case 0:
-                    label2.Text = "Buble é uma merda";
+                    label2.Text = "Método muito ineficiente em relação ao número de movimentações e comparações";
                     break;
                 case 1:
-                    label2.Text = "heap fuma droga";
+                    label2.Text = "Algoritmo muito bom";
                     break;
                 case 2:
-                    label2.Text = "insertio o pau no cu";
+                    label2.Text = "Dempenho semelhante ao InsertionSort";
                     break;
                 case 3:
-                    label2.Text = "k é o kácete";
+                    label2.Text = "Melhor algoritmo em termos de comparação e movimentação";
                     break;
                 case 4:
-                    label2.Text = "merge = merda";
+                    label2.Text = "Algoritmo Mediano";
                     break;
                 case 5:
-                    label2.Text = "new sort a poha";
+                    label2.Text = "Apresenta bons resultados";
                     break;
                 case 6:
-                    label2.Text = "new sort a poha 2";
+                    label2.Text = "Apresenta bons resultados";
                     break;
                 case 7:
-                    label2.Text = "quick sai fora";
+                    label2.Text = "Boa escolha, o algoritmo apresenta bons resultados";
                     break;
                 case 8:
-                    label2.Text = "selectio é o caralho";
+                    label2.Text = "Algoritmo mediano, apresenta resultado pouco melhor que o ShakerSort";
                     break;
                 case 9:
-                    label2.Text = "shaker só milk";
+                    label2.Text = "Método muito ineficiente em relação ao número de movimentações e comparações";
                     break;
                 case 10:
-                    label2.Text = "shell é posto poha";
+                    label2.Text = "Algoritmo Mediano";
                     break;                    
             }
 
@@ -305,6 +305,7 @@ namespace TrabalhoAED
                         V_Anal[i].N_Comp = K.N_Comp;
                         V_Anal[i].N_Mov = K.N_Mov;
                         V_Anal[i].Tempo = diff.TotalMilliseconds;
+
                     }
 
                     V = Analizador.getMedia(V_Anal, NArq);    
@@ -320,6 +321,8 @@ namespace TrabalhoAED
                     label17.Text = V_DP.N_Comp.ToString();
                     label20.Text = V_DP.Tempo.ToString();
                     label24.Text = V_DP.Tamanho.ToString();
+
+
 
                     break;
 

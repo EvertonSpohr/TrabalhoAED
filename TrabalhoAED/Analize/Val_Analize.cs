@@ -4,6 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+ *  Esta classe contem as informaçoes de tamanho, comparaçao, etc. 
+ */
+
+
 namespace TrabalhoAED.Analize
 {
     public class Val_Analize

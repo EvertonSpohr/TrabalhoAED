@@ -5,6 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using TrabalhoAED.Analize;
 
+/*
+ *  Esta classe implementa o algoritmo shakersort
+ *  Estrategia:
+ *      Bubblesort Melhorado, percorre o vetor tando de frente para traz como de traz 
+ *      para frente
+ */ 
+
+
 namespace TrabalhoAED.Ordenação
 {
     class ShakerSort
@@ -25,7 +33,6 @@ namespace TrabalhoAED.Ordenação
 
             do
             {
-
                 troca = false;
 
                 for (i = n - 1; i > 0; i--)
@@ -55,7 +62,6 @@ namespace TrabalhoAED.Ordenação
                         Analizador.Lista_Vet[pos][i] = temp;
                     }
                 }
-
 
             } while (troca);
         }

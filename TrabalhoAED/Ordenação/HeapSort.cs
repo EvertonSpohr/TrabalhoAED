@@ -26,8 +26,7 @@ namespace TrabalhoAED.Ordenação
 
             while ((j <= dir) && (pai == 0))
             {
-
-                N_Comp++; N_Comp++;
+                N_Comp++; 
 
                 N_Comp++;
                 if (j < dir)

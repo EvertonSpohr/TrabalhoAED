@@ -18,7 +18,6 @@ namespace TrabalhoAED.Ordenação
 //QUICK SORT =====================================================================================
         void QS(int esq, int dir, int pos)
         {
-
             int i = esq, j = dir, meio = (int)Analizador.Lista_Vet[pos][(esq + dir) / 2];
 
             do
@@ -26,14 +25,12 @@ namespace TrabalhoAED.Ordenação
                 while ((i < dir) && ((int)Analizador.Lista_Vet[pos][i] < meio))
                 {
                     N_Comp++; N_Comp++;
-
                     i++;
                 }
 
                 while ((j > esq) && ((int)Analizador.Lista_Vet[pos][j] > meio))
                 {
                     N_Comp++; N_Comp++;
-
                     j--;
                 }
 

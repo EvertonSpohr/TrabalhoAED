@@ -21,7 +21,7 @@ namespace TrabalhoAED.Arqs
 
 //ATRIBUTOS =================================================================================================
 
-        public static string[] Local = new string[15];
+        public static string[] Local = new string[15];   // VETOR QUE CONTEM OS ENDEREÇOS DOS ARQUIVOS DE ENTRADA
 
 //METODOS ===================================================================================================
 
@@ -30,11 +30,11 @@ namespace TrabalhoAED.Arqs
         {
             int ContL = 0; //Contador para as letras
             
-            char[] Vet_Texto = new char[10000];
+            char[] Vet_Texto = new char[10001];
             
             StreamReader Read = new StreamReader(Local);
 
-            while (!Read.EndOfStream && (ContL < 9999))     //ENQUANTO NAO FOR O FIM DO ARQUIVO... NO MAX 9999 LETRAS
+            while (!Read.EndOfStream && (ContL < 10000))     //ENQUANTO NAO FOR O FIM DO ARQUIVO... NO MAX 10000 LETRAS
             {
                 string L = Read.ReadLine();
 

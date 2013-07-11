@@ -5,6 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using TrabalhoAED.Analize;
 
+/*
+ *  Esta classe implementa o algoritmo selection sort
+ *  Estrategia:
+ *      Selecionar o menor elemento
+ *      Trocalo com a primeira possicao do vetor
+ *      processo repetido N-1 vezes até que o vetor esteja ordenado
+ */
+
 namespace TrabalhoAED.Ordenação
 {
     class SelectionSort
@@ -26,8 +34,7 @@ namespace TrabalhoAED.Ordenação
             {
                 N_Comp++;
                 if ((int)temp > (int)Analizador.Lista_Vet[pos][i])
-                {
-                    //N_Mov++;
+                {                    
                     temp = Analizador.Lista_Vet[pos][i];
                     j = i;
                 }

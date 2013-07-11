@@ -121,7 +121,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(36, 192);
+            this.progressBar1.Location = new System.Drawing.Point(38, 217);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(201, 14);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
@@ -130,7 +130,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(33, 117);
+            this.label8.Location = new System.Drawing.Point(35, 142);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(106, 13);
             this.label8.TabIndex = 14;
@@ -138,7 +138,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(149, 115);
+            this.numericUpDown1.Location = new System.Drawing.Point(151, 140);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             10,
             0,
@@ -172,7 +172,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(162, 154);
+            this.button2.Location = new System.Drawing.Point(164, 179);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 0;
@@ -183,7 +183,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 91);
+            this.label3.Location = new System.Drawing.Point(35, 116);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 13);
             this.label3.TabIndex = 4;
@@ -191,7 +191,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(36, 154);
+            this.button1.Location = new System.Drawing.Point(38, 179);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(73, 23);
             this.button1.TabIndex = 3;
@@ -201,17 +201,17 @@
             // 
             // label2
             // 
-            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Location = new System.Drawing.Point(35, 44);
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(35, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 41);
+            this.label2.Size = new System.Drawing.Size(201, 57);
             this.label2.TabIndex = 2;
             this.label2.Text = "Informações sobre o Algoritmo";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(34, 241);
+            this.label9.Location = new System.Drawing.Point(36, 266);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(48, 13);
             this.label9.TabIndex = 7;
@@ -219,7 +219,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(149, 272);
+            this.button4.Location = new System.Drawing.Point(151, 297);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(88, 39);
             this.button4.TabIndex = 8;
@@ -251,7 +251,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(36, 272);
+            this.button3.Location = new System.Drawing.Point(38, 297);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(88, 39);
             this.button3.TabIndex = 6;

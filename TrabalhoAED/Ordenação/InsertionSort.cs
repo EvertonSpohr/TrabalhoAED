@@ -5,6 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using TrabalhoAED.Analize;
 
+/*
+ *  Esta classe implementa o algoritmo insertion sort
+ *  Estrategia:
+ *      O algoritmo do insertion sort consiste basicamente em percorrer o vetor da esquerda para a
+ *      direita e ordenar de acordo com o que se encontra a esquerda da posição atual até o início do vetor
+ */
+
+
 namespace TrabalhoAED.Ordenação
 {
     class InsertionSort
@@ -19,9 +27,6 @@ namespace TrabalhoAED.Ordenação
 //INSERTION SORT ==========================================================================================
         public void insertionSort(int n, int pos)
         {
-
-            Console.Out.WriteLine("Dentro do Insertion Sort");
-
             int i, j;
             char temp;
 
